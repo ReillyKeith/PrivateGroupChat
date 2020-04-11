@@ -12,12 +12,12 @@ pipeline {
         }
         stage('Start Server') {
             steps {
-                sh 'cd Group-Chat/server/ && npm start'
+                sh 'cd Group-Chat/server/ && npm start &'
             }
         }
         stage('Start Client') {
             steps {
-                sh 'cd Group-Chat/client/ && npm start'
+                sh 'cd Group-Chat/client/ && npm start &'
             }
         }
         stage('Deploy') {
