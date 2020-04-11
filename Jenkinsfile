@@ -27,10 +27,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('Debug Env - 15 mins live') {
+        stage('Debug Env - 1 Hour Live') {
             steps {
-                echo 'Go live for 15 mins....'
-                sh 'sleep 900'
+                echo 'Go live for 1 hour....'
+                sh 'sleep 3600'
             }
         }
     }
