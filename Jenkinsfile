@@ -25,5 +25,11 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Sleep - Debug') {
+            steps {
+                echo 'Sleep for 24 hours....'
+                sh 'sleep 86400'
+            }
+        }
     }
 }
