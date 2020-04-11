@@ -1,11 +1,13 @@
 pipeline {
     agent any
 
+    tools {nodejs "NodeJS"}
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'sudo yum install nodejs'
+                sh 'npm config ls'
             }
         }
         stage('Start Server') {
