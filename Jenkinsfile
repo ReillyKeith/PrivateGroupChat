@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     tools {nodejs "NodeJS"}
+    properties([pipelineTriggers([cron('0 */4 * * *')])])
 
     stages {
         stage('Build') {
