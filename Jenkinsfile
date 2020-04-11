@@ -7,17 +7,18 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'npm install --save react-router-dom'
                 sh 'npm config ls'
             }
         }
         stage('Start Server') {
             steps {
+                sh 'npm install --save cors nodemon express socket.io'
                 sh 'cd Group-Chat/server/ && npm start &'
             }
         }
         stage('Start Client') {
             steps {
+                sh 'npm install --save react react-router socket.io-client react-scroll-to-bottom react-emoji query-string react-dom react-scripts react-router-dom'
                 sh 'cd Group-Chat/client/ && npm start &'
             }
         }
