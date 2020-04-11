@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ls -al'
+                sh 'cd Group-Chat/server/ && npm start'
+                sh 'cd Group-Chat/client/ && npm start'
             }
         }
         stage('Test') {
