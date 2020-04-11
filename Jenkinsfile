@@ -5,13 +5,17 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'cd Group-Chat/server/ && npm start'
-                sh 'cd Group-Chat/client/ && npm start'
+                sh 'sudo yum install nodejs'
             }
         }
-        stage('Test') {
+        stage('Start Server') {
             steps {
-                echo 'Testing..'
+                sh 'cd Group-Chat/server/ && npm start'
+            }
+        }
+        stage('Start Client') {
+            steps {
+                sh 'cd Group-Chat/client/ && npm start'
             }
         }
         stage('Deploy') {
