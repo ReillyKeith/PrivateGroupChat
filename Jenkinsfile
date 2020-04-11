@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'npm install --save react-router-dom'
                 sh 'npm config ls'
             }
         }
