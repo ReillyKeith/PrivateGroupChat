@@ -30,7 +30,7 @@ pipeline {
         stage('Debug Env - 1 hour') {
             steps {
                 echo 'Sleep for 1 hour....'
-                sh 'sleep 3600'
+                sh 'sleep 1800'
             }
         }
     }
