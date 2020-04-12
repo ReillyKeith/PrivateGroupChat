@@ -1,8 +1,9 @@
 pipeline {
     agent any
-
     tools {nodejs "NodeJS"}
-
+    triggers {
+        cron('0 * * * *')
+    }
     stages {
         stage('Build') {
             steps {
@@ -27,10 +28,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('Debug Env - 1 Hour Live') {
+        stage('Debug Env - 50 Mins Live') {
             steps {
                 echo 'Go live for 1 hour....'
-                sh 'sleep 3600'
+                sh 'sleep 3000'
             }
         }
     }
