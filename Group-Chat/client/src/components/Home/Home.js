@@ -3,6 +3,17 @@ import {Link} from 'react-router-dom';
 
 import './Home.css';
 
+/*
+TODO
+
+Counter - Users
+Counter - Rooms
+
+brief des of application
+also get icons for social media share
+
+*/
+
 const Home = () => {
 
     return (
@@ -13,10 +24,11 @@ const Home = () => {
                 <Link to={`/Join`}>
                     <button className="button mt-20" type="submit">Room Setup</button>
                 </Link>  
-                <a class="fa fa-facebook-square fa-4x" href="https://www.facebook.com/sharer/sharer.php?u=http://www.1234.ie"/>
-                <a class="tw tw-twitter-square tw-4x" href="https://twitter.com/home?status=http://www.1234.ie ">Tweet</a>
-                <a class="pn pn-pinterest-square pn-4x" href="https://pinterest.com/pin/create/button/?url=http://www.1234.ie&media=&description="/>
-                <a class="pn pn-pinterest-square pn-4x" href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.1234.ie&title=&summary=&source="/>
+
+                <a class="fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u=http://www.1234.ie"/>
+                <a class="tw tw-twitter-square" href="https://twitter.com/home?status=http://www.1234.ie "/>
+                <a class="pn-pinterest-square" href="https://pinterest.com/pin/create/button/?url=http://www.1234.ie&media=&description="/>
+                <a class="lk-linkedin-square" href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.1234.ie&title=&summary=&source="/>
             </div>
         </div>
     )
