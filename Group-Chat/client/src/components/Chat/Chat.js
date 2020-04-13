@@ -17,7 +17,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = `http://1234.ie:5000`;
+  const ENDPOINT = `localhost:5000`;
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -29,7 +29,9 @@ const Chat = ({ location }) => {
 
     socket.emit('join', { name, room }, (error) => {
       if(error) {
+        // Display the error, and then return the user to Home page
         alert(error);
+        window.location="/";
       }
     });
   }, [ENDPOINT, location.search]);
