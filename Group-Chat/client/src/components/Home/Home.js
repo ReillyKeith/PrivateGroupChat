@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import queryString from 'query-string';
 import io from "socket.io-client";
-
-import TextContainer from '../TextContainer/TextContainer'
-import Messages from '../Messages/Messages';
-import InfoBar from '../InfoBar/InfoBar';
-import Input from '../Input/Input';
-
 import {Link} from 'react-router-dom';
 
 import './Home.css';
@@ -26,7 +19,7 @@ also get icons for social media share
 
 const Home = () => {
     const [onlinecounter, setOnlineCounter] = useState([]);
-    const ENDPOINT = `http://127.0.0.1:5000`;
+    const { ENDPOINT } = require('../Config/config.js');
     socket = io(ENDPOINT);
 
     // Get the total count off online users
@@ -41,8 +34,11 @@ const Home = () => {
     return (
         <div className="homeOuterContainer">
             <div className="homeInnerContainer">
+                
                 <h1 className="heading">Welcome to the conversation</h1>
                 <p className="text" >Users Online: <a className="homeUserCount"> {onlinecounter}</a></p>
+                <form className="formText">This is a work in progress</form>
+
                 <Link to={`/Join`}>
                     <button className="button mt-20" type="submit">Room Setup</button>
                 </Link>  

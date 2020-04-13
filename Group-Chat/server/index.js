@@ -20,7 +20,6 @@ io.on('connect', (socket) => {
     }
 
     socket.join(user.room);
-    console.log("room:"+user);
 
     socket.emit('message', { user: 'admin', text: `${user.name}, welcome to room ${user.room}.`});
     socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} has joined!` });
@@ -29,7 +28,6 @@ io.on('connect', (socket) => {
 
     // add counter for all users
     userCounter++;
-    console.log(`User connected - Total:`+userCounter);
 
     callback();
   });
@@ -58,7 +56,6 @@ io.on('connect', (socket) => {
       io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room)});
       // remove user when they disconnect
       userCounter--;
-      console.log(`User discounted - Total:`+userCounter);
     }
   })
 });
