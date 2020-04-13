@@ -20,6 +20,10 @@ html, body {
     align-items: center;
     background-color: #1A1A1D;
   }
+
+  .homeUserCount{
+    color:red;
+}
   
   .homeInnerContainer {
     text-align: center;
