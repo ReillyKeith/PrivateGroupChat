@@ -1,8 +1,6 @@
 pipeline {
     agent any
     tools {nodejs "NodeJS"}
-    triggers {
-    }
     stages {
         stage('Build') {
             steps {
