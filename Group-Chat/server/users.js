@@ -22,7 +22,7 @@ const addUser = ({ id, name, room }) => {
         rooms.push(user.room);
     } 
 
-    // debug
+    // debug - counting rooms
     console.log('rooms:'+ rooms);
 
   return { user };

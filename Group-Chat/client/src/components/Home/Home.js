@@ -29,6 +29,9 @@ const Home = () => {
                 <Link to={`/Join`}>
                     <button className="button mt-20" type="submit">Room Setup</button>
                 </Link>  
+                <Link to={`/Lobby`}>
+                    <button className="button mt-20" type="submit">Main Lobby</button>
+                </Link>  
             </div>
         </div>
     )
