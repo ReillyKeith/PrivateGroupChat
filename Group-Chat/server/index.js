@@ -1,11 +1,18 @@
-const http = require('http');
+const https = require('https');
+const fs = require('fs');
 const express = require('express');
 const socketio = require('socket.io');
+
+const options = {
+  key: fs.readFileSync('/home/ec2-user/key.pem'),
+  cert: fs.readFileSync('/home/ec2-user/cert.pem')
+};
+
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
 const app = express();
-const server = http.createServer(app);
+const server = https.createServer(app);
 const io = socketio(server);
 
 // Count users active
