@@ -1,11 +1,11 @@
-const https = require('https');
+const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
 const app = express();
-const server = https.createServer(app);
+const server = http.createServer(app);
 const io = socketio(server);
 
 // Count users active
