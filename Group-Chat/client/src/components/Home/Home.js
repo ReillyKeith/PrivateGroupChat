@@ -26,12 +26,14 @@ const Home = () => {
                 
                 <h1 className="heading">Chat Now</h1>
                 <p className="text" >Users Online: <a className="homeUserCount"> {onlinecounter}</a></p>
-                <Link to={`/Join`}>
-                    <button className="button mt-20" type="submit">Room Setup</button>
-                </Link>  
-                <Link to={`/Lobby`}>
-                    <button className="button mt-20" type="submit">Main Lobby</button>
-                </Link>  
+                <div className="homeButtonContainer">
+                    <Link to={`/Lobby`}>
+                        <button className="button mt-20" type="submit">Main Lobby</button>
+                    </Link>  
+                    <Link to={`/Join`}>
+                        <button className="button mt-20" type="submit">Create Room</button>
+                    </Link>  
+                </div>
             </div>
         </div>
     )

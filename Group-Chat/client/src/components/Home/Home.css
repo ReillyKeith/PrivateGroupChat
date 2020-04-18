@@ -21,6 +21,15 @@ html, body {
     background-color: #1A1A1D;
   }
 
+  .homeButtonContainer {
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: auto;
+    align-items: center;
+    background-color: #1A1A1D;
+  }
+
   .homeUserCount{
     color:red;
 }
