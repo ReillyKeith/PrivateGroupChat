@@ -35,14 +35,11 @@ const Home = () => {
         <div className="homeOuterContainer">
             <div className="homeInnerContainer">
                 
-                <h1 className="heading">Welcome to the conversation</h1>
+                <h1 className="heading">Chat Now</h1>
                 <p className="text" >Users Online: <a className="homeUserCount"> {onlinecounter}</a></p>
-                <form className="formText">This is a work in progress</form>
-
                 <Link to={`/Join`}>
                     <button className="button mt-20" type="submit">Room Setup</button>
                 </Link>  
-
             </div>
         </div>
     )
