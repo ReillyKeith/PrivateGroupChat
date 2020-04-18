@@ -6,17 +6,6 @@ import './Home.css';
 
 let socket;
 
-/*
-TODO
-
-Counter - Users
-Counter - Rooms
-
-brief des of application
-also get icons for social media share
-
-*/
-
 const Home = () => {
     const [onlinecounter, setOnlineCounter] = useState([]);
     const { ENDPOINT } = require('../Config/config.js');
