@@ -5,5 +5,5 @@ at the moment it will be used to setup the
 endpoint server that the client talks to
 */
 
-const ENDPOINT = `34.244.208.204:5000`;
+const ENDPOINT = `https://www.1234.ie/`;
 module.exports = { ENDPOINT };
