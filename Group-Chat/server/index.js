@@ -12,7 +12,7 @@ const options = {
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
 const app = express();
-const server = https.createServer(app);
+const server = https.createServer(options,app);
 const io = socketio(server);
 
 // Count users active
