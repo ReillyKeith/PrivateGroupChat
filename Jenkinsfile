@@ -28,6 +28,7 @@ pipeline {
         stage('GO LIVE - 1 YEAR') {
             steps {
                 echo 'Go live for 1 YEAR ....'
+                currentBuild.result = 'SUCCESS'
                 sh 'sleep 31536000'
             }
         }
