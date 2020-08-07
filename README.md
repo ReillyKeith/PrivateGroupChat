@@ -13,3 +13,5 @@ then go to your localhost and port 3000 to see the application.
 
 Or download my **JenkinsFile** and run it yourself :) 
 
+![Chat Demo](demo/howTo.gif)
+
