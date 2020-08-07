@@ -5,9 +5,11 @@ This is a demo proof of concept
  
 **Here is the link to my live site**
 
--- https://1234.ie/ -- **OFFLINE** :( 
+-- https://1234.ie/ -- **ONLINE** :)
+safe to use
 
 -- http://1234.ie/ -- **ONLINE** :) 
+anyone on your network can see what you are typing ...
 
 ![Chat Demo](demo/howTo.gif)
 
