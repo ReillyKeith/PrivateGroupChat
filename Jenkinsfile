@@ -25,11 +25,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('GO LIVE - 1 YEAR') {
+        stage('GO LIVE - 15 Mins') {
             steps {
-                echo 'Go live for 1 YEAR ....'
-                currentBuild.result = 'SUCCESS'
-                sh 'sleep 31536000'
+                echo 'Go live for 15 Mins ....'
+                sh 'sleep 900'
             }
         }
     }
