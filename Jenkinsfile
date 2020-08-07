@@ -25,10 +25,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('GO LIVE - 15 Mins') {
+        stage('GO LIVE - 1 Week') {
             steps {
-                echo 'Go live for 15 Mins ....'
-                sh 'sleep 900'
+                echo 'Go live for 1 Week ....'
+                sh 'sleep 604800'
             }
         }
     }
