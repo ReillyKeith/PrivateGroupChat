@@ -27,7 +27,7 @@ pipeline {
         }
         stage('GO LIVE - 1 YEAR') {
             steps {
-                echo 'Go live for 1 YEAR....'
+                echo 'Go live for 1 YEAR ....'
                 sh 'sleep 31536000'
             }
         }
