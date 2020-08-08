@@ -11,9 +11,6 @@ This site allows any one to chat online.
 -- https://1234.ie/ -- **ONLINE** :)
 safe to use
 
--- http://1234.ie/ -- **OFFLINE** :) 
-anyone on your network can see what you are typing ...
-
 ![Chat Demo](demo/howTo.gif)
 
 (if the link is down)
