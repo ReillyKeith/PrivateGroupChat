@@ -4,7 +4,7 @@
 This site allows any one to chat online.
 - Does not record any names, users or messessages that are sent. 
 - Rooms created only exist as long as users are in them.
-- You see how many people are in the room/lobbby at all times
+- You see how many people are in the room/lobby at all times
  
 **Here is the link to my live site**
 
