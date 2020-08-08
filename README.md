@@ -8,7 +8,7 @@ This is a demo proof of concept
 -- https://1234.ie/ -- **ONLINE** :)
 safe to use
 
--- http://1234.ie/ -- **ONLINE** :) 
+-- http://1234.ie/ -- **OFFLINE** :) 
 anyone on your network can see what you are typing ...
 
 ![Chat Demo](demo/howTo.gif)
