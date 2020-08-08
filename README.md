@@ -1,7 +1,10 @@
 ![GitHub Logo](Group-Chat/client/public/favicon.ico)
 
 # PrivateGroupChat
-This is a demo proof of concept 
+This site allows any one to chat online.
+- does not record any names, users or messessages that are sent. 
+- Rooms created only exist as long as users are in them.
+- You see how many people are in the room/lobbby at all times
  
 **Here is the link to my live site**
 
