@@ -13,9 +13,18 @@ safe to use
 
 ![Chat Demo](demo/howTo.gif)
 
-(if the link is down)
+######If the link is down######
 
-Please download the code and run npm instrall in the client and server folders. 
+Please download the code.
+Update the config file config.js:
+Group-Chat/client/src/components/Config
+
+```
+const ENDPOINT = `localhost:5000`;
+```
+
+run ```npm install``` in the client and server folders. 
+
 then go to your localhost and port 3000 to see the application. 
 
 Or download my **JenkinsFile** and run it yourself :) 
