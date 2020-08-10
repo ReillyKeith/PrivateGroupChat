@@ -13,11 +13,11 @@ safe to use
 
 ![Chat Demo](demo/howTo.gif)
 
-***If the link is down***
+###### If the link is down ######
 
 Please download the code.
 Update the config file config.js:
-Group-Chat/client/src/components/Config
+_ **Group-Chat/client/src/components/Config** _ 
 
 ```
 const ENDPOINT = `localhost:5000`;
