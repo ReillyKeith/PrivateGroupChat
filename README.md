@@ -8,7 +8,7 @@ This site allows any one to chat online.
  
 **Here is the link to my live site**
 
--- https://1234.ie/ -- **ONLINE** :)
+https://1234.ie/ **ONLINE** :)
 safe to use
 
 ![Chat Demo](demo/howTo.gif)
@@ -17,7 +17,7 @@ safe to use
 
 Please download the code.
 Update the config file config.js:
-_ **Group-Chat/client/src/components/Config** _ 
+**Group-Chat/client/src/components/Config**
 
 ```
 const ENDPOINT = `localhost:5000`;
