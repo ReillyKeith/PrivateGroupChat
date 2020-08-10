@@ -12,7 +12,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestLobbyRoomChat():
   def setup_method(self, method):
-    self.driver = webdriver.Firefox()
+    self.driver = webdriver.Firefox(executable_path=r'/Users/keithreilly/Documents/GitHub/PrivateGroupChat/automationTest/geckodriver')
     self.vars = {}
   
   def teardown_method(self, method):
@@ -22,21 +22,29 @@ class TestLobbyRoomChat():
     # Test name: Lobby Room Chat
     # Step # | name | target | value
     # 1 | open | / | 
-    self.driver.get("https://www.1234.ie/")
+    self.driver.get("https://1234.ie/")
     # 2 | setWindowSize | 1200x664 | 
     self.driver.set_window_size(1200, 664)
+    time.sleep(3)
     # 3 | click | css=a:nth-child(1) > .button | 
     self.driver.find_element(By.CSS_SELECTOR, "a:nth-child(1) > .button").click()
+    time.sleep(3)
     # 4 | click | css=.input | 
     self.driver.find_element(By.CSS_SELECTOR, ".input").click()
+    time.sleep(3)
     # 5 | type | css=.input | Hello
     self.driver.find_element(By.CSS_SELECTOR, ".input").send_keys("Hello")
+    time.sleep(3)
     # 6 | sendKeys | css=.input | ${KEY_ENTER}
     self.driver.find_element(By.CSS_SELECTOR, ".input").send_keys(Keys.ENTER)
+    time.sleep(3)
     # 7 | click | css=.input | 
     self.driver.find_element(By.CSS_SELECTOR, ".input").click()
+    time.sleep(3)
     # 8 | type | css=.input | Thisisatest
     self.driver.find_element(By.CSS_SELECTOR, ".input").send_keys("Thisisatest")
+    time.sleep(3)
     # 9 | sendKeys | css=.input | ${KEY_ENTER}
     self.driver.find_element(By.CSS_SELECTOR, ".input").send_keys(Keys.ENTER)
+    time.sleep(3)
   

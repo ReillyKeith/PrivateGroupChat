@@ -12,7 +12,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestJoinRoom():
   def setup_method(self, method):
-    self.driver = webdriver.Firefox()
+    self.driver = webdriver.Firefox(executable_path=r'/Users/keithreilly/Documents/GitHub/PrivateGroupChat/automationTest/geckodriver')
     self.vars = {}
   
   def teardown_method(self, method):
@@ -22,31 +22,43 @@ class TestJoinRoom():
     # Test name: JoinRoom
     # Step # | name | target | value
     # 1 | open | / | 
-    self.driver.get("https://www.1234.ie/")
+    self.driver.get("https://1234.ie/")
+    time.sleep(3)
     # 2 | setWindowSize | 550x691 | 
     self.driver.set_window_size(550, 691)
+    time.sleep(3)
     # 3 | click | css=a:nth-child(2) > .button | 
     self.driver.find_element(By.CSS_SELECTOR, "a:nth-child(2) > .button").click()
+    time.sleep(3)
     # 4 | click | css=div:nth-child(2) > .JoinInput | 
     self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > .JoinInput").click()
+    time.sleep(3)
     # 5 | type | css=div:nth-child(2) > .JoinInput | tester
     self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > .JoinInput").send_keys("tester")
+    time.sleep(3)
     # 6 | click | css=div > .mt-20 | 
     self.driver.find_element(By.CSS_SELECTOR, "div > .mt-20").click()
+    time.sleep(3)
     # 7 | type | css=div > .mt-20 | room
     self.driver.find_element(By.CSS_SELECTOR, "div > .mt-20").send_keys("room")
+    time.sleep(3)
     # 8 | click | css=.button | 
     self.driver.find_element(By.CSS_SELECTOR, ".button").click()
+    time.sleep(3)
     # 9 | mouseOver | css=.button | 
     element = self.driver.find_element(By.CSS_SELECTOR, ".button")
     actions = ActionChains(self.driver)
     actions.move_to_element(element).perform()
     # 10 | click | css=.input | 
     self.driver.find_element(By.CSS_SELECTOR, ".input").click()
+    time.sleep(3)
     # 11 | type | css=.input | Testing a room
     self.driver.find_element(By.CSS_SELECTOR, ".input").send_keys("Testing a room")
+    time.sleep(3)
     # 12 | click | css=.sendButton | 
     self.driver.find_element(By.CSS_SELECTOR, ".sendButton").click()
+    time.sleep(3)
     # 13 | click | css=a > img | 
     self.driver.find_element(By.CSS_SELECTOR, "a > img").click()
+    time.sleep(3)
   

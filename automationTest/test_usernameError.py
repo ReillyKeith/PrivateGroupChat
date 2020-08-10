@@ -12,7 +12,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestUsernameError():
   def setup_method(self, method):
-    self.driver = webdriver.Firefox()
+    self.driver = webdriver.Firefox(executable_path=r'/Users/keithreilly/Documents/GitHub/PrivateGroupChat/automationTest/geckodriver')
     self.vars = {}
   
   def teardown_method(self, method):
@@ -22,23 +22,30 @@ class TestUsernameError():
     # Test name: usernameError
     # Step # | name | target | value
     # 1 | open | / | 
-    self.driver.get("https://www.1234.ie/")
+    self.driver.get("https://1234.ie/")
     # 2 | setWindowSize | 550x691 | 
+    time.sleep(3)
     self.driver.set_window_size(550, 691)
     # 3 | click | css=a:nth-child(2) > .button | 
     self.driver.find_element(By.CSS_SELECTOR, "a:nth-child(2) > .button").click()
+    time.sleep(3)
     # 4 | click | css=div:nth-child(2) > .JoinInput | 
     self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > .JoinInput").click()
+    time.sleep(3)
     # 5 | type | css=div:nth-child(2) > .JoinInput | thisiswaytoolonganameforauser
     self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > .JoinInput").send_keys("thisiswaytoolonganameforauser")
+    time.sleep(3)
     # 6 | type | css=div > .mt-20 | room
     self.driver.find_element(By.CSS_SELECTOR, "div > .mt-20").send_keys("room")
+    time.sleep(3)
     # 7 | click | css=.button | 
     self.driver.find_element(By.CSS_SELECTOR, ".button").click()
+    time.sleep(3)
     # 8 | mouseOver | css=.button | 
     element = self.driver.find_element(By.CSS_SELECTOR, ".button")
     actions = ActionChains(self.driver)
     actions.move_to_element(element).perform()
+    time.sleep(3)
     # 9 | assertAlert | Username too long... | 
     assert self.driver.switch_to.alert.text == "Username too long..."
   

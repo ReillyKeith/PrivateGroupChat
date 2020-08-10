@@ -12,7 +12,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestRoomnametoobig():
   def setup_method(self, method):
-    self.driver = webdriver.Firefox()
+    self.driver = webdriver.Firefox(executable_path=r'/Users/keithreilly/Documents/GitHub/PrivateGroupChat/automationTest/geckodriver')
     self.vars = {}
   
   def teardown_method(self, method):
@@ -22,21 +22,28 @@ class TestRoomnametoobig():
     # Test name: room name too big
     # Step # | name | target | value
     # 1 | open | / | 
-    self.driver.get("https://www.1234.ie/")
+    self.driver.get("https://1234.ie/")
     # 2 | setWindowSize | 550x691 | 
     self.driver.set_window_size(550, 691)
+    time.sleep(3)
     # 3 | click | css=a:nth-child(2) > .button | 
     self.driver.find_element(By.CSS_SELECTOR, "a:nth-child(2) > .button").click()
+    time.sleep(3)
     # 4 | click | css=div:nth-child(2) > .JoinInput | 
     self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > .JoinInput").click()
+    time.sleep(3)
     # 5 | type | css=div:nth-child(2) > .JoinInput | test
     self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > .JoinInput").send_keys("test")
+    time.sleep(3)
     # 6 | click | css=div > .mt-20 | 
     self.driver.find_element(By.CSS_SELECTOR, "div > .mt-20").click()
+    time.sleep(3)
     # 7 | type | css=div > .mt-20 | testestestestestestestestestest
     self.driver.find_element(By.CSS_SELECTOR, "div > .mt-20").send_keys("testestestestestestestestestest")
+    time.sleep(3)
     # 8 | click | css=.button | 
     self.driver.find_element(By.CSS_SELECTOR, ".button").click()
+    time.sleep(3)
     # 9 | mouseOver | css=.button | 
     element = self.driver.find_element(By.CSS_SELECTOR, ".button")
     actions = ActionChains(self.driver)
