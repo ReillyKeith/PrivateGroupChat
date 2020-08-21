@@ -28,3 +28,5 @@ run ```npm install``` in the client and server folders.
 then go to your localhost and port 3000 to see the application. 
 
 Or download my **JenkinsFile** and run it yourself :) 
+
+[If this is useful - feel free to buy me a coffee :) ](https://github.com/ReillyKeith/PrivateGroupChat/blob/master/demo/paypal/paypal.jpeg)
