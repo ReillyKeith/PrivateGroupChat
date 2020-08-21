@@ -8,7 +8,7 @@ This site allows any one to chat online.
  
 **Here is the link to my live site**
 
-https://1234.ie/ **ONLINE** :)
+https://1234.ie/ **OFFLINE** :)
 safe to use
 
 ![Chat Demo](demo/howTo.gif)
