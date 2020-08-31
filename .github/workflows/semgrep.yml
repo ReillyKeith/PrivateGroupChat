@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Check
     steps:
-      - uses: actions/upload-artifact@v1
     - uses: actions/checkout@v1
     - name: Semgrep
       id: semgrep
