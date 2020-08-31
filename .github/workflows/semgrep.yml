@@ -1,14 +1,18 @@
-name: Semgrep
+name: semgrep-rules-test
+
 on: [push]
+
 jobs:
-  semgrep:
+  self_test:
     runs-on: ubuntu-latest
-    name: Check
+    name: run semgrep rules tests
     steps:
-    - uses: actions/checkout@v1
-    - name: Semgrep
-      id: semgrep
-      uses: returntocorp/semgrep-action@v1
-      languages: [javascript]
-      with:
-        config: r/all
+      - uses: actions/checkout@v2
+      - name: run tests
+        id: semgrep-tests
+        uses: returntocorp/semgrep-rules-test-action@master
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: tests
+          path: ${{ steps.semgrep-tests.outputs.output_dir }}
