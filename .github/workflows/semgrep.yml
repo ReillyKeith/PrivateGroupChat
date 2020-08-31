@@ -9,5 +9,6 @@ jobs:
     - name: Semgrep
       id: semgrep
       uses: returntocorp/semgrep-action@v1
+      languages: [javascript]
       with:
         config: r/all
