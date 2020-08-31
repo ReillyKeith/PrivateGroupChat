@@ -1,4 +1,4 @@
-name: semgrep-rules-test
+name: semgrep
 
 on: [push]
 
