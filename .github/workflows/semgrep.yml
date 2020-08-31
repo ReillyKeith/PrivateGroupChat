@@ -1,18 +1,14 @@
-name: semgrep-rules-test
-
+name: Semgrep
 on: [push]
-
 jobs:
-  self_test:
+  semgrep:
     runs-on: ubuntu-latest
-    name: run semgrep rules tests
+    name: Check
     steps:
-      - uses: actions/checkout@v2
-      - name: run tests
-        id: semgrep-tests
-        uses: returntocorp/semgrep-rules-test-action-develop@master
       - uses: actions/upload-artifact@v1
-        if: always()
-        with:
-          name: tests
-          path: ${{ steps.semgrep-tests.outputs.output_dir }}
+    - uses: actions/checkout@v1
+    - name: Semgrep
+      id: semgrep
+      uses: returntocorp/semgrep-action@v1
+      with:
+        config: p/nodejsscan
